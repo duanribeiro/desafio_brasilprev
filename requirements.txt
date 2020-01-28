@@ -1,0 +1,9 @@
+json
+bson
+flask_restplus
+pandas
+random
+flask
+flask_cors
+pytest
+logging
