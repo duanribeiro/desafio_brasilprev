@@ -8,9 +8,9 @@ class Property:
         self.rent = rent
         self.owner = owner
 
+        
     def update_owner(self, owner):
         self.owner = owner
-
 
 
 class Player:
@@ -20,16 +20,17 @@ class Player:
         self.position = 0
         self.properties = []
 
-
+        
     def receive_rent(self, rent):
         self.money += rent
 
-
+        
     def buy_property(self, property, board_game):
         self.money -= property.cost
         self.properties.append(property.position)
         board_game[property.position].update_owner(owner=self.profile)
 
+        
     def roll_dice(self):
         self.position += random.randrange(1, 7)
         if self.position >= 20:
